@@ -1,0 +1,17 @@
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.workout-type-icon {
+  height: 3em;
+  width: 3em;
+  margin-right: 2em;
+}
+
+.workout-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
