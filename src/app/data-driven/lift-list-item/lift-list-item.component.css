@@ -1,0 +1,29 @@
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.lift-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+label {
+  margin-right: 5px;
+}
+
+#lift-name {
+  margin-right: 2em;
+}
+
+#add-set-button {
+  margin-left: 6em;
+  color: blue;
+}
+
+#add-set-button:hover {
+  text-decoration: underline;
+}

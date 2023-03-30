@@ -2,6 +2,7 @@
 .list-item {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 .workout-type-icon {
@@ -14,4 +15,5 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-right: 2em;
 }

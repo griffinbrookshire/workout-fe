@@ -1,5 +1,6 @@
+
 <ul>
-  <li *ngFor="let workout of workouts">
+  <li *ngFor="let workout of workouts" routerLink="/workout/{{workout.id}}">
     <app-workout-list-item [workout]="workout"></app-workout-list-item>
   </li>
 </ul>

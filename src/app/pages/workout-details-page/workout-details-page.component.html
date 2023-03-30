@@ -1,0 +1,45 @@
+
+<div id="details-page" class="h-center" *ngIf="workout">
+
+    <h2>{{workout.type}} Details</h2>
+
+    <div id="details-block">
+
+      <div class="detail" *ngIf="workout.date">
+        <p>{{workout.date | date:'MMM d, y, h:mm a'}}</p>
+      </div>
+
+      <div class="detail" *ngIf="workout | hasProp: 'duration'">
+        <label for="workout-duration">Duration: </label>
+        <input id="workout-duration" [(ngModel)]="workout.duration" placeholder="Duration"/>
+        <select [(ngModel)]="workout.durationUnit">
+          <option *ngFor="let unit of durationUnits" [ngValue]="unit">{{unit}}</option>
+        </select>
+      </div>
+
+      <div class="detail" *ngIf="workout | hasProp: 'distance'">
+        <label for="workout-distance">Distance: </label>
+        <input id="workout-distance" [(ngModel)]="workout.distance" placeholder="Distance"/>
+      </div>
+
+      <div class="detail" *ngIf="workout | hasProp: '_power'">
+        <span id="workout-power">Power: {{workout.power}}</span>
+      </div>
+
+      <div class="detail" id="lifts-detail" *ngIf="workout | hasProp: '_lifts'">
+        <div (click)="toggleLifts()">
+          <img class="black-triangle" src={{blackTriangleUrl}}>
+          <span id="workout-lifts">Lifts: {{workout.lifts.length}}</span>
+        </div>
+        <span id="add-lift-button" (click)="addLift()">Add Lift</span>
+      </div>
+      <app-lift-list *ngIf="liftsExpanded" [lifts]="workout.lifts"></app-lift-list>
+
+    </div>
+
+    <div id="button-container">
+      <button type="button" (click)="save()">Save</button>
+      <button type="button" (click)="goBack()">Go Back</button>
+    </div>
+
+</div>

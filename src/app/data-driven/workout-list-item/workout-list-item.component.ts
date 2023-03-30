@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Workout } from 'src/app/interfaces/workout';
+import { Workout } from 'src/app/models/workout';
 
 @Component({
   selector: 'app-workout-list-item',
@@ -8,11 +8,11 @@ import { Workout } from 'src/app/interfaces/workout';
 })
 export class WorkoutListItemComponent implements OnInit {
 
-  @Input() workout: Workout | undefined;
+  @Input() workout: any;
   imgUrl: String = "";
   imgUrlDict: { [key: string]: string } = {
     "Lift": "assets/dumbell-icon.jpg",
-    "Run": "assets/running-icon.png"
+    "Cardio": "assets/running-icon.png"
   };
 
   constructor() { }

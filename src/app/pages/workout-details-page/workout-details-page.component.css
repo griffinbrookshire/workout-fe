@@ -1,0 +1,56 @@
+
+#details-page {
+  padding: 1em 2em;
+  max-width: 62.5em;
+  border: 1px solid red;
+  border-radius: 1em;
+  /* padding: 1em; */
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.h-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#details-block {
+  margin-bottom: 2em;
+}
+
+button {
+  margin-right: 3em;
+  width: 8em;
+  height: 3em;
+}
+
+#lifts-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#lifts-detail > div {
+  display: flex;
+  align-items: center;
+}
+
+#lifts-detail > div > label {
+  margin-right: 0.25em;
+}
+
+.black-triangle {
+  width: 1.5em;
+  height: 1.5em;
+  /* position: relative;
+  right: 30px; */
+}
+
+#add-lift-button {
+  margin-left: 6em;
+  color: blue;
+}
+
+#add-lift-button:hover {
+  text-decoration: underline;
+}

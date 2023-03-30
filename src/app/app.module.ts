@@ -10,6 +10,12 @@ import { NavBarComponent } from './common/nav-bar/nav-bar.component';
 import { WorkoutListComponent } from './data-driven/workout-list/workout-list.component';
 import { WorkoutListItemComponent } from './data-driven/workout-list-item/workout-list-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WorkoutDetailsPageComponent } from './pages/workout-details-page/workout-details-page.component';
+import { FormsModule } from '@angular/forms';
+import { HasPropPipe } from './pipes/has-prop.pipe';
+import { WorkoutService } from './services/workout.service';
+import { LiftListComponent } from './data-driven/lift-list/lift-list.component';
+import { LiftListItemComponent } from './data-driven/lift-list-item/lift-list-item.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +25,19 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     NavBarComponent,
     WorkoutListComponent,
-    WorkoutListItemComponent
+    WorkoutListItemComponent,
+    WorkoutDetailsPageComponent,
+    HasPropPipe,
+    LiftListComponent,
+    LiftListItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [WorkoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

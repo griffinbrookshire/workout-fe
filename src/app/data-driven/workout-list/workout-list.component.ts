@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Workout } from 'src/app/interfaces/workout';
-import { WorkoutServiceService } from 'src/app/services/workout-service.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { Workout } from 'src/app/models/workout';
 
 @Component({
   selector: 'app-workout-list',
@@ -9,13 +8,10 @@ import { WorkoutServiceService } from 'src/app/services/workout-service.service'
 })
 export class WorkoutListComponent implements OnInit {
 
-  workouts: Workout[] = [];
+  @Input() workouts: Workout[] = [];
 
-  constructor(service: WorkoutServiceService) {
-    this.workouts = service.getWorkouts();
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

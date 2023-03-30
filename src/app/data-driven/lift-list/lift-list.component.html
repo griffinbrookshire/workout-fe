@@ -1,0 +1,6 @@
+<ul *ngIf="lifts.length > 0">
+  <li *ngFor="let lift of lifts">
+    <app-lift-list-item [lift]="lift"></app-lift-list-item>
+  </li>
+</ul>
+<p *ngIf="lifts.length <= 0" style="color: red;">No lifts recorded yet</p>

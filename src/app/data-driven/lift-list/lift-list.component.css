@@ -9,7 +9,3 @@ li {
   padding: 1em;
   margin-bottom: 1em;
 }
-
-li:hover {
-  background-color: lightcoral;
-}

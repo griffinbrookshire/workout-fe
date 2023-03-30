@@ -1,0 +1,24 @@
+<div class="list-item">
+  <div class="lift-info">
+    <label for="lift-name">Name: </label>
+    <input id="lift-name" [(ngModel)]="lift.name" placeholder="Name"/>
+  </div>
+  <div class="lift-info">
+    <span>Power: {{lift.power}}</span>
+  </div>
+  <div class="lift-info">
+    <span>Sets: {{lift.sets.length}}</span>
+    <span id="add-set-button" (click)="addSet()">Add Set</span>
+  </div>
+  <div class="lift-info">
+    <ul>
+      <li *ngFor="let set of lift.sets">
+        <label for="set-reps">Reps: </label>
+        <input id="set-reps" [(ngModel)]="set.reps" placeholder="Reps"/>
+        <label for="set-weight">Weight: </label>
+        <input id="set-weight" [(ngModel)]="set.weight" placeholder="Weight"/>
+        <span>Power: {{set.power}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

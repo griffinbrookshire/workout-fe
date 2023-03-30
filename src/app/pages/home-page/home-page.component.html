@@ -1,6 +1,9 @@
 
 <div id="home-page" class="h-center">
-  <app-header></app-header>
-  <app-nav-bar></app-nav-bar>
-  <app-workout-list></app-workout-list>
+  <div id="nav">
+    <button id="home-link" (click)="getAllWorkouts()">All Workouts</button>
+    <button id="lifts-link" (click)="getLifts()">Lifts</button>
+    <button id="cardio-link" (click)="getCardios()">Cardio</button>
+  </div>
+  <app-workout-list [workouts]="workouts"></app-workout-list>
 </div>
